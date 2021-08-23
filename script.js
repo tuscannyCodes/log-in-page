@@ -1,3 +1,5 @@
+'use strict';
+
 //ATTATCH
 
 const emailBox = document.getElementById("emailBox");
@@ -12,42 +14,60 @@ const mainButtonDiv = document.getElementById("mainButtonDiv")
 //ATTATCH END
 
 //VARIABLES
-let userName;
-let email;
-let password;
+let userName = false;
+let email = false;
+let password = false;
 let fields;
 let timeToLogIn = 0;
+
+
 
 //VARIABLES END
 //MAIN FUNCTION
 const signUpToday = () =>{
+
 
 if(emailBox.value.includes("@") &&  emailBox.value.includes(".com"))
 //EMAIL
 {
     email=emailBox.value; 
     
-}else{
-    errorMessageBox.classList.add("errorView")
-    errorMessage.innerHTML= "Please enter a valid email"
 }
+if(email == false){
+    errorMessageBox.classList.add("errorView")
+    errorMessage.innerHTML= "Please enter a valid email";
+    userName = false;
+    password = false;
+
+};
 //USERNAME
-if(userNameBox.value != ""){
+if(userNameBox.value != "")
+{
 
     userName = userNameBox.value;
-   
-}else{
-errorMessage.innerHTML= "Please enter a Username"
+    
+   console.log(userName);
 }
+if(userNameBox.value === ""){
+errorMessageBox.classList.add("errorView")
+errorMessage.innerHTML= "Please enter a Username";
+email = false;
+password = false;
+
+};
 //PASSWORD
 if(passwordBox.value.length > 7){
 
     password= passwordBox.value;
    
-}else{
-
-    errorMessage.innerHTML= "Password must be at least 7 characters"
+   
 }
+if(passwordBox.value.length < 7){
+    errorMessageBox.classList.add("errorView")
+    errorMessage.innerHTML= "Password must be at least 7 characters";
+    userName = false;
+    email = false;
+};
 
 
 
@@ -56,7 +76,7 @@ setTimeout(function(){
     errorMessageBox.classList.remove("errorView")
 }, 3000)
 //LOG IN FUNCTIONALITY
-if(password, userName, email) {
+if(password && userName && email) {
     
     emailBox.value = "";
     userNameBox.value = "";
@@ -83,6 +103,7 @@ if(password, userName, email) {
 function logIn() {
 if(timeToLogIn === 1 && userNameBox.value === userName && passwordBox.value === password){
 console.log("goodtogo")
+window.open('https://designamite.co.uk','_blank');
 
 
 }else{
@@ -92,7 +113,7 @@ console.log("goodtogo")
         errorMessageBox.classList.remove("errorView")
     }, 3000)
 }
-
+console.log(userName)
 }
 //MAIN FUNCTION END
 
