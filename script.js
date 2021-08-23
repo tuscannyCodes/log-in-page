@@ -69,6 +69,12 @@ if(passwordBox.value.length < 7){
     email = false;
 };
 
+if(passwordBox.value == "" && userNameBox.value === "" && emailBox.value == ""){
+
+    errorMessageBox.classList.add("errorView")
+    errorMessage.innerHTML= "Please enter the required fields";
+}
+
 
 
 //ERROR MESSAGE NULL
