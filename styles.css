@@ -30,6 +30,7 @@ body {
 #signUpHeader {
   position: absolute;
   margin-top: -4.5em;
+  cursor: default;
 }
 hr {
   width: 250px;
