@@ -129,7 +129,7 @@ input:focus {
 
 #errorContainer {
   position: absolute;
-  display: flex;
+  display: none;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -140,7 +140,7 @@ input:focus {
   width: 300px;
   opacity: 0%;
   transition: all 1s ease;
-  margin-top: 26em;
+  margin-top: 16em;
   margin-left: 5px;
 }
 
