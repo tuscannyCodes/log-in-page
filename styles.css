@@ -63,6 +63,7 @@ hr {
   align-content: center;
   justify-content: center;
   font-family: "Noto Sans", sans-serif;
+  z-index: 2;
 }
 
 input {
@@ -140,7 +141,7 @@ input:focus {
   width: 300px;
   opacity: 0%;
   transition: all 1s ease;
-  z-index: 2;
+  margin-top: 200px;
   margin-left: 5px;
 }
 
@@ -157,6 +158,6 @@ input:focus {
   }
   100% {
     opacity: 80;
-    transform: translateY(-100%);
+    transform: translateY(90%);
   }
 }
