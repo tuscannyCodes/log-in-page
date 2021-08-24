@@ -27,11 +27,6 @@ body {
   cursor: pointer;
 }
 
-#signUpSection {
-  display: flex;
-  flex-direction: column;
-}
-
 #signUpHeader {
   display: flex;
   align-items: center;
@@ -39,7 +34,8 @@ body {
   justify-content: center;
   flex-direction: column;
   position: relative;
-
+  padding-bottom: 30px;
+  margin-top: -20px;
   cursor: default;
 }
 hr {
@@ -103,6 +99,7 @@ input:focus {
   width: 90px;
   transition: all 0.5s ease;
   cursor: pointer;
+  z-index: 1;
 }
 
 #logInButton {
@@ -160,6 +157,6 @@ input:focus {
   }
   100% {
     opacity: 80;
-    transform: translateY(-100%);
+    transform: translateY(-70%);
   }
 }
